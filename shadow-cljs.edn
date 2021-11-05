@@ -1,0 +1,14 @@
+{:source-paths
+ ["src"]
+
+ :dependencies []
+
+ :builds
+{:app
+  {:main hicljs.core/main
+   :target :node-script
+   :compiler-options {:infer-externs :auto}
+   :output-to "hicljs.js"
+   :devtools
+   {:after-load hicljs.core/start!
+    :before-load hicljs.core/stop!}}}}
